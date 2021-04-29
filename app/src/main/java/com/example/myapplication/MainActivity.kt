@@ -120,22 +120,78 @@ class MainActivity : Activity() {
         var buttonYmn:TextView?=null
         buttonYmn= findViewById(R.id.Ymn)
         buttonYmn.setOnClickListener{
-                setText("*")
+            val str = math2?.text.toString()
+            if (str.isNotEmpty()) {
+                val meshaet =str.substring(0, str.length-1)
+                if (str.last().toString() == "(") {
+                    setText("")
+                } else {
+
+                    if (myArray.contains(str.last().toString()) || str.last().toString() == ".") {
+                        math2?.text = str.substring(0, str.length - 1)
+                        setText("*")
+                    } else {
+                        setText("*")
+                    }
+
+                }
+
+                if (myArray.contains(str.last().toString()) && meshaet.last().toString() == "(") {
+                    math2?.text = str.substring(0, str.length - 1)
+                }
+            }
         }
         var buttonDel:TextView?=null
         buttonDel= findViewById(R.id.Del)
         buttonDel.setOnClickListener{
-            setText("/")
+            val str = math2?.text.toString()
+            if (str.isNotEmpty()) {
+                val meshaet =str.substring(0, str.length-1)
+                if (str.last().toString() == "(") {
+                    setText("")
+                } else {
+
+                    if (myArray.contains(str.last().toString()) || str.last().toString() == ".") {
+                        math2?.text = str.substring(0, str.length - 1)
+                        setText("/")
+                    } else {
+                        setText("/")
+                    }
+
+
+                }
+
+                if (myArray.contains(str.last().toString()) && meshaet.last().toString() == "(") {
+                    math2?.text = str.substring(0, str.length - 1)
+                }
+            }
         }
         var buttonMinus:TextView?=null
         buttonMinus= findViewById(R.id.Minus)
         buttonMinus.setOnClickListener{
-            setText("-")
+            val str = math2?.text.toString()
+            if (str.isNotEmpty()) {
+                if (myArray.contains(str.last().toString()) || str.last().toString() == ".") {
+                    math2?.text = str.substring(0, str.length - 1)
+                    setText("-")
+                } else {
+                    setText("-")
+                }
+            }
         }
         var buttonPlus:TextView?=null
         buttonPlus= findViewById(R.id.Plus)
         buttonPlus.setOnClickListener{
-            setText("+")
+            val str = math2?.text.toString()
+            if (str.isNotEmpty()){
+                if(myArray.contains(str.last().toString())|| str.last().toString()==".") {
+                    math2?.text = str.substring(0, str.length - 1)
+                    setText("+")
+                }
+                else {
+                    setText("+")
+                }
+            }
         }
         var buttonLefttScobka:TextView?=null
         buttonLefttScobka= findViewById(R.id.LeftScobka)
