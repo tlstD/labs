@@ -35,15 +35,6 @@ class MainActivity : Activity() {
         button0= findViewById(R.id.number_0)
         button0.setOnClickListener{
             val str = math2.text.toString()
-            if(str.isNotEmpty())
-            {
-
-
-
-            }
-            else{
-
-            }
             setText("0")
 
         }
@@ -103,7 +94,7 @@ class MainActivity : Activity() {
             }catch (e:Exception){
                 Log.d("Ошибка", "сообщение:${e.message}")
 
-                Toast.makeText(this,"Ты шо долбаеб?",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Не не не ?",Toast.LENGTH_SHORT).show()
 
             }
 
