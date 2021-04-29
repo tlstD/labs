@@ -4,6 +4,7 @@ package com.example.myapplication
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
@@ -13,12 +14,18 @@ import org.w3c.dom.Text
 import java.lang.Exception
 
 class MainActivity : Activity() {
+    private var math1:TextView? = null
+    private var result:TextView? = null
+    private var counter:Int = 0
+    private var start:Boolean =false
+    private var zapis:Double = 0.0
+    private var flo:Int = 0
+    private val displayMetrics = DisplayMetrics()
 
 
 
 
     private var math:TextView?=null
-    private var result:TextView?=null
 
 
     val myArray = arrayOf("-","+","*","/")
