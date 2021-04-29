@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.myapplication.MainActivity
+import com.example.myapplication.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -16,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
-        val log = Intent(this,MainActivity::class.java)
+        val log = Intent(this, MainActivity::class.java)
         var logi= intent.getStringExtra("log")
         var pas= intent.getStringExtra("pas")
         var proverka = intent.getIntExtra("proverka", 0)

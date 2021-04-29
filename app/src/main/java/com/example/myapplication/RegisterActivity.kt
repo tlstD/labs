@@ -13,13 +13,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AlertDialog
-import com.google.android.gms.safetynet.SafetyNet
-import com.google.android.gms.safetynet.SafetyNetClient
+import com.example.myapplication.R
+
 
 class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val myClient: SafetyNetClient = SafetyNet.getClient(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         var sign_up:TextView? = null
