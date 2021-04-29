@@ -1,4 +1,4 @@
-package com.example.kalkulator
+package com.example.myapplication
 
 import android.app.Dialog
 import android.content.DialogInterface
