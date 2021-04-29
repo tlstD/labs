@@ -145,7 +145,43 @@ class MainActivity : Activity() {
         var buttonRightScobka:TextView?=null
         buttonRightScobka= findViewById(R.id.RightScobka)
         buttonRightScobka.setOnClickListener{
-            setText(")")
+            val str = math2?.text.toString()
+            var n: Int = 0
+            var i: Int = 0
+            var go = emptyArray<String>()
+            while (n in 0..str.length) {
+                var skobka: String = str.substring(0, str.length - n)
+                if (skobka.isNotEmpty()){
+                    if (chisla2.contains(skobka.last().toString())||myArray.contains(skobka.last().toString())){
+                        n++
+                    }
+                    else{
+                        if(skobka.last().toString() == "("){
+                            i++
+                            n++
+                        }
+                        else{
+                            if(skobka.last().toString() == ")"){
+                                i--
+                                n++
+                            }
+                        }
+                    }
+
+                }
+                else break
+            }
+            if(i>0) {
+                go += "true"
+            }
+            else go+= "false"
+            if (str.isNotEmpty() && myArray3.contains(str.last().toString())){
+                go+= "false"
+            }
+            if (go.contains("false")){
+                setText("")
+            }
+            else setText(")")
         }
         var buttonGoBack:TextView?=null
         buttonGoBack= findViewById(R.id.GoBack)
