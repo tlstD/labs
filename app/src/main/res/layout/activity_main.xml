@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/math_Operation"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="40dp" />
+
+    <TextView
+
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+
+        />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/AC"
+                style="@style/ActionKnopka"
+                android:text="AC"></TextView>
+
+            <TextView
+                android:id="@+id/LeftScobka"
+                style="@style/ActionKnopka"
+                android:text="("></TextView>
+
+            <TextView
+                android:id="@+id/RightScobka"
+                style="@style/ActionKnopka"
+                android:text=")"></TextView>
+
+            <TextView
+                android:id="@+id/Del"
+                style="@style/ActionKnopka"
+                android:text="÷">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/number_7"
+                style="@style/NumberKnopka"
+                android:text="7"></TextView>
+
+            <TextView
+                android:id="@+id/number_8"
+                style="@style/NumberKnopka"
+                android:text="8"></TextView>
+
+            <TextView
+                android:id="@+id/number_9"
+                style="@style/NumberKnopka"
+                android:text="9"></TextView>
+
+            <TextView
+                android:id="@+id/Ymn"
+                style="@style/ActionKnopka"
+                android:text="*"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/number_4"
+                style="@style/NumberKnopka"
+                android:text="4"></TextView>
+
+            <TextView
+                android:id="@+id/number_5"
+                style="@style/NumberKnopka"
+                android:text="5"></TextView>
+
+            <TextView
+                android:id="@+id/number_6"
+                style="@style/NumberKnopka"
+                android:text="6"></TextView>
+
+            <TextView
+                android:id="@+id/Minus"
+                style="@style/ActionKnopka"
+                android:text="-"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/number_1"
+                style="@style/NumberKnopka"
+                android:text="1"></TextView>
+
+            <TextView
+                android:id="@+id/number_2"
+                style="@style/NumberKnopka"
+                android:text="2"></TextView>
+
+            <TextView
+                android:id="@+id/number_3"
+                style="@style/NumberKnopka"
+                android:text="3"></TextView>
+
+            <TextView
+                android:id="@+id/Plus"
+                style="@style/ActionKnopka"
+                android:text="+"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Tochka"
+                style="@style/NumberKnopka"
+                android:text=".">
+
+                </TextView>
+
+            <TextView
+                android:id="@+id/number_0"
+                style="@style/NumberKnopka"
+                android:text="0"></TextView>
+
+            <TextView
+                android:id="@+id/GoBack"
+                style="@style/NumberKnopka"
+                android:text="GoBack">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/Ravno"
+
+                style="@style/ActionKnopka"
+                android:text="="></TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
