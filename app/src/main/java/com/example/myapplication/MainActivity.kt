@@ -13,8 +13,24 @@ import org.w3c.dom.Text
 import java.lang.Exception
 
 class MainActivity : Activity() {
+
+
+
+
     private var math:TextView?=null
     private var result:TextView?=null
+
+
+    val myArray = arrayOf("-","+","*","/")
+    val myArray2 = arrayOf("-","+","*","/","(",")")
+    val myArray3 = arrayOf("-","+","*","/","(")
+    val chisla =arrayOf("0","1","2","3","4","5","6","7","8","9")
+    val chisla2 =arrayOf("0","1","2","3","4","5","6","7","8","9",".","s","i","n","c","o")
+
+
+
+
+
     private var isNewOp = true
     var dot = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -150,11 +166,50 @@ class MainActivity : Activity() {
         var  buttonTochka:TextView?=null
         buttonTochka= findViewById(R.id.Tochka)
         buttonTochka.setOnClickListener{
-            if(dot == false){
-                
+            val str = math2?.text.toString()
+            var proverka = emptyArray<String>()
+            var n:Int = 0
+            var i:Int = 0
+            while (n in 0..str.length){
+                var tochka:String =str.substring(0, str.length - n)
+                if (tochka.isNotEmpty()) {
+                    if (chisla.contains(tochka.last().toString())) {
+                        proverka += "true"
+                        n++
+                        i++
+                    } else {
+                        if (myArray2.contains(tochka.last().toString()) && i > 0) {
+                            proverka += "true"
+                            break
+                        } else {
+                            if (tochka.last().toString() == ".") {
+                                proverka += "false"
+                                break
+                            }
+                            else{
+                                proverka +="false"
+                                break
+                            }
+                        }
+                    }
+                }
+                else{
+                    if(i==0){
+                        proverka += "false"
+                        break
+                    }
+                    else{
+                        proverka += "true"
+                        break
+                    }
+                }
             }
-            dot = true
-            setText(".")
+            if (proverka.contains("false")){
+                setText("")
+            }
+            else{
+                setText(".")
+            }
         }
 
 
